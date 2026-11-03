@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Turn Sound Cue",
+    "description": "Plays a sound when a reply finishes and a different alert when an approval or question waits for you, with an optional always-on listener on every page. Pick a built-in tone or your own audio file."
+  }
+}

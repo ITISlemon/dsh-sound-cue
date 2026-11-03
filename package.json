@@ -1,0 +1,32 @@
+{
+  "name": "dsh-sound-cue",
+  "version": "1.4.0",
+  "type": "module",
+  "description": "Play a customizable sound when a turn finishes and when an approval or question waits for you.",
+  "license": "MIT",
+  "author": "ITISlemon",
+  "keywords": ["dsh", "dsh-plugin", "deepseek-harness", "sound", "notification", "ui"],
+  "homepage": "https://github.com/ITISlemon/dsh-sound-cue#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ITISlemon/dsh-sound-cue.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ITISlemon/dsh-sound-cue/issues"
+  },
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": ["index.js", "client.js", "cordis.patch.yml", "locale/*.json", "icon.svg", "README.md", "LICENSE"],
+  "dsh": {
+    "bundle": { "patch": "./cordis.patch.yml" },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": ["@deepseek-ai/dsh-client-ui-conversation"]
+    }
+  }
+}
